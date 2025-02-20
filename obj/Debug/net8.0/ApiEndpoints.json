@@ -1,20 +1,28 @@
 [
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_0",
-    "RelativePath": "",
+    "ContainingType": "api_filmes_senai.Controllers.GeneroController",
+    "Method": "Get",
+    "RelativePath": "api/Genero",
     "HttpMethod": "GET",
-    "IsController": false,
+    "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api_filmes_senai.Controllers.GeneroController",
+    "Method": "Post",
+    "RelativePath": "api/Genero",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain"
-        ],
-        "StatusCode": 200
+        "Name": "novoGenero",
+        "Type": "api_filmes_senai.Domains.Genero",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   }
 ]
