@@ -15,6 +15,8 @@ builder.Services.AddScoped<IGeneroRepository,GeneroRepository>();
 //Adicionar o serviço de controladores
 builder.Services.AddControllers();
 
+builder.Services.AddScoped<IFilmeRepository, FilmeRepository>();
+
 var app = builder.Build();
 
 //Adicionar o mapeamento dos controllers

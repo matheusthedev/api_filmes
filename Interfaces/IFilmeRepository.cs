@@ -13,5 +13,7 @@ namespace api_filmes_senai.Interfaces
         void Deletar(Guid id);
 
         Filme BuscarPorId(Guid id);
+
+        List<Filme> ListarPorGenero(Guid idGenero);
     }
 }

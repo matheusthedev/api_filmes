@@ -30,12 +30,37 @@ namespace api_filmes_senai.Repositories
 
         public void Atualizar(Guid id, Genero genero)
         {
-            throw new NotImplementedException();
+            try
+            {
+               Genero generoBuscado = _context.Generos.Find(id)!;
+
+                if (generoBuscado != null)
+                {
+                    generoBuscado.Nome = genero.Nome; 
+                }
+
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public Genero BuscarPorId(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Genero generoBuscado = _context.Generos.Find(id)!;
+
+                return generoBuscado;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         /// <summary>
@@ -60,7 +85,23 @@ namespace api_filmes_senai.Repositories
 
         public void Deletar(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                Genero generoBuscado = _context.Generos.Find(id)!;
+                if (generoBuscado != null)
+                {
+                    _context.Generos.Remove(generoBuscado);
+                }
+
+                _context.SaveChanges();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public List<Genero> Listar()
